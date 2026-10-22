@@ -1,0 +1,228 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "author": "שרה",
+      "title": "מסעדה מומלצת בירושלים",
+      "content": "אשמח להמלצות על מסעדות כשרות ללא גלוטן בירושלים.",
+      "category": "מסעדות",
+      "date": "לפני שעה",
+      "likes": 15,
+      "liked": true,
+      "image": "",
+      "isExpert": false,
+      "replies": [
+        {
+          "id": 11,
+          "author": "מיכל",
+          "text": "אני מאוד אוהבת את גלוטן פרי.",
+          "date": "לפני 30 דקות",
+          "image": "",
+          "isExpert": false,
+          "replies": [
+            {
+              "id": 1786538671564,
+              "author": "chanalif",
+              "text": "ממממממממ",
+              "image": "",
+              "isExpert": false,
+              "date": "עכשיו",
+              "replies": []
+            },
+            {
+              "id": 1786538704793,
+              "author": "chanalif",
+              "text": "ץץץץץץץץץ",
+              "image": "",
+              "isExpert": false,
+              "date": "עכשיו",
+              "replies": []
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "author": "דיאטנית ליאת",
+          "text": "מומלץ תמיד לוודא שאין זיהום משני במטבח.",
+          "date": "לפני 20 דקות",
+          "image": "",
+          "isExpert": true,
+          "replies": [
+            {
+              "id": 121,
+              "author": "שרה",
+              "text": "תודה רבה על ההמלצה!",
+              "date": "לפני 10 דקות",
+              "image": "",
+              "isExpert": false,
+              "replies": [
+                {
+                  "id": 1211,
+                  "author": "דיאטנית ליאת",
+                  "text": "בשמחה 😊",
+                  "date": "לפני 5 דקות",
+                  "image": "",
+                  "isExpert": true,
+                  "replies": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1786534528450,
+          "author": "chanalif",
+          "text": "הכי שווה",
+          "image": "",
+          "isExpert": false,
+          "date": "עכשיו",
+          "replies": []
+        },
+        {
+          "id": 1786538643137,
+          "author": "chanalif",
+          "text": "נה",
+          "image": "",
+          "isExpert": false,
+          "date": "עכשיו",
+          "replies": []
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "author": "דיאטנית ליאת",
+      "title": "שאלות על בדיקות דם",
+      "content": "ניתן לשאול כאן כל שאלה בנושא בדיקות ומעקב.",
+      "category": "בריאות",
+      "date": "היום",
+      "likes": 28,
+      "liked": true,
+      "image": "",
+      "isExpert": true,
+      "replies": []
+    },
+    {
+      "id": 3,
+      "author": "יעל",
+      "title": "איזה קמח הכי טוב לעוגות?",
+      "content": "ניסיתי כמה סוגים ועדיין יוצא לי יבש.",
+      "category": "מתכונים",
+      "date": "אתמול",
+      "likes": 12,
+      "image": "",
+      "isExpert": false,
+      "replies": [
+        {
+          "id": 1786534916128,
+          "author": "chanalif",
+          "text": "ממממממממממממממממ",
+          "image": "",
+          "isExpert": false,
+          "date": "עכשיו",
+          "replies": [
+            {
+              "id": 1792353125538,
+              "author": "חיה",
+              "authorId": "8",
+              "text": "חיעכ",
+              "image": "",
+              "isExpert": false,
+              "createdAt": "2026-10-18T19:52:05.538Z",
+              "replies": []
+            }
+          ]
+        },
+        {
+          "id": 1786534957152,
+          "author": "chanalif",
+          "text": "ההההההההההה",
+          "image": "",
+          "isExpert": false,
+          "date": "עכשיו",
+          "replies": []
+        },
+        {
+          "id": 1786536582448,
+          "author": "chanalif",
+          "text": "נננננננננננננ",
+          "image": "",
+          "isExpert": false,
+          "date": "עכשיו",
+          "replies": []
+        }
+      ],
+      "likedBy": [
+        "7",
+        "8"
+      ]
+    },
+    {
+      "author": "chanalif",
+      "title": "ההה",
+      "content": "נכנהככנ",
+      "category": "מוצרים",
+      "image": "",
+      "isExpert": false,
+      "id": 4,
+      "likes": 2,
+      "replies": [
+        {
+          "id": 1792322546493,
+          "author": "chanalif",
+          "authorId": "7",
+          "text": "לללללל",
+          "image": "",
+          "isExpert": false,
+          "createdAt": "2026-10-18T11:22:26.493Z",
+          "replies": []
+        }
+      ],
+      "date": "עכשיו",
+      "likedBy": [
+        "7"
+      ]
+    },
+    {
+      "author": "chanalif",
+      "title": "בגבבבבבבבבבב",
+      "content": "בבבבבבבב",
+      "category": "מתכונים",
+      "image": "",
+      "isExpert": false,
+      "id": 5,
+      "likes": 0,
+      "liked": false,
+      "replies": [],
+      "date": "עכשיו"
+    },
+    {
+      "author": "chanalif",
+      "title": "יייייייייי",
+      "content": "ךךך",
+      "category": "מתכונים",
+      "image": "",
+      "isExpert": true,
+      "id": 6,
+      "likes": 1,
+      "liked": true,
+      "replies": [],
+      "date": "עכשיו"
+    },
+    {
+      "id": 7,
+      "author": "chanalif",
+      "authorId": "7",
+      "title": "ךלחיעכ",
+      "content": "לחטארק'ראט",
+      "category": "מתכונים",
+      "image": "http://localhost:2000/image/forum-1792337647174-755751930.jpeg",
+      "isExpert": false,
+      "sensitivity": "general",
+      "likes": 0,
+      "likedBy": [],
+      "replies": [],
+      "createdAt": "2026-10-18T15:34:07.219Z"
+    }
+  ]
+}

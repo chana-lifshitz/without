@@ -1,0 +1,248 @@
+@use '../../styles/mixins' as *;
+
+/* תגיות "ללא..." */
+
+.allergen-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+
+  &.large {
+    gap: .45rem;
+
+    .allergen-badge {
+      padding: .35rem .75rem;
+      font-size: .88rem;
+    }
+  }
+}
+
+.allergen-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  padding: .2rem .55rem;
+  border-radius: 6px;
+  background: var(--surface-2);
+  color: var(--ink-2);
+  font-size: .78rem;
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: nowrap;
+
+  &.mine {
+    color: var(--ink);
+  }
+
+  &.match {
+    background: var(--brand);
+    color: #fff;
+  }
+
+  &.warning {
+    background: var(--warn-soft);
+    color: var(--warn);
+    white-space: normal;
+  }
+
+  &.more {
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--muted);
+  }
+}
+
+/* סרגל סינון */
+
+.allergen-filter {
+  direction: rtl;
+  margin: 0 0 1.75rem;
+  padding: 1rem 1.1rem;
+  @include card;
+}
+
+.allergen-filter-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: .85rem;
+}
+
+.allergen-filter-count {
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.allergen-filter button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.allergen-match-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--ink);
+  font-weight: 600;
+
+  small {
+    color: var(--muted);
+    font-weight: 400;
+    font-size: .88rem;
+  }
+
+  .switch {
+    position: relative;
+    flex-shrink: 0;
+    width: 36px;
+    height: 20px;
+    border-radius: 999px;
+    background: var(--line-strong);
+    transition: background .15s;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: var(--shadow-sm);
+      transition: transform .15s;
+    }
+  }
+
+  &.active .switch {
+    background: var(--brand);
+
+    &::after {
+      transform: translateX(-16px);
+    }
+  }
+}
+
+.allergen-setup-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  border: none;
+  background: none;
+  padding: 0;
+  color: var(--brand);
+  font-weight: 600;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+.allergen-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+
+.allergen-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  min-height: 34px;
+  padding: 0 .8rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink-2);
+  font-size: .88rem;
+  transition: border-color .15s, background-color .15s, color .15s;
+
+  &:hover {
+    border-color: var(--ink-2);
+    color: var(--ink);
+  }
+
+  &.active {
+    border-color: var(--brand);
+    background: var(--brand-soft);
+    color: var(--brand);
+    font-weight: 600;
+  }
+
+  &.locked {
+    cursor: default;
+  }
+}
+
+.allergen-clear {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  min-height: 34px;
+  padding: 0 .6rem;
+  border: none;
+  background: none;
+  color: var(--ink-2);
+  font-size: .88rem;
+  font-weight: 600;
+
+  &:hover {
+    color: var(--danger);
+  }
+}
+
+/* פירוט בחלון */
+
+.allergen-details {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.allergen-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: .55rem;
+  padding: .75rem .9rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+
+  svg {
+    flex-shrink: 0;
+    margin-top: .15rem;
+  }
+
+  &.ok {
+    background: var(--brand-soft);
+    color: var(--brand);
+  }
+
+  &.warn {
+    background: var(--warn-soft);
+    color: var(--warn);
+  }
+}
+
+.allergen-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: .84rem;
+}
+
+@media (max-width: $bp-sm) {
+  .allergen-filter {
+    padding: .85rem;
+  }
+
+  .allergen-chip {
+    min-height: 32px;
+    padding: 0 .65rem;
+    font-size: .82rem;
+  }
+}

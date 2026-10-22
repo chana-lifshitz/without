@@ -1,0 +1,133 @@
+@use './mixins' as *;
+
+// עמודי התחברות והרשמה
+
+.auth-page {
+  direction: rtl;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1rem;
+  background: var(--bg);
+  text-align: right;
+}
+
+.auth-brand {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin-bottom: 1.75rem;
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+
+  span {
+    font-family: var(--font-head);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}
+
+.auth-card {
+  width: min(420px, 100%);
+  padding: 2rem;
+  @include card;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+
+  h1 {
+    margin: 0;
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+.auth-subtitle {
+  margin: -.6rem 0 .4rem;
+  color: var(--ink-2);
+  line-height: 1.6;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+
+  > span {
+    font-size: .92rem;
+    font-weight: 600;
+  }
+
+  input {
+    @include input;
+  }
+
+  .error {
+    color: var(--danger);
+    font-size: .85rem;
+  }
+}
+
+.auth-field-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.auth-hint {
+  color: var(--muted);
+  font-size: .82rem;
+}
+
+.suggest-password {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--brand);
+  font-size: .85rem;
+  font-weight: 600;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+.auth-submit {
+  @include btn-primary;
+  width: 100%;
+  min-height: 46px;
+  margin-top: .3rem;
+  font-size: 1rem;
+}
+
+.auth-switch {
+  margin: .2rem 0 0;
+  color: var(--ink-2);
+  font-size: .95rem;
+  text-align: center;
+
+  button {
+    padding: 0;
+    border: none;
+    background: none;
+    color: var(--brand);
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  }
+}

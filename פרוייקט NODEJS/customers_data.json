@@ -1,0 +1,109 @@
+{
+  "customers": [
+    {
+      "id": "1",
+      "name": "שרי פסטינגר",
+      "email": "s0527115231@gmail.com",
+      "password": "sgF9YA*7Dr8b",
+      "isAdmin": true,
+      "favoriteRecipes": [],
+      "favoriteProducts": [],
+      "favoriteRestaurants": [],
+      "followedForums": []
+    },
+    {
+      "id": "2",
+      "name": "דוד כהן",
+      "email": "david.cohen@example.com",
+      "isAdmin": false,
+      "password": "adminDavid!",
+      "favoriteRecipes": [],
+      "favoriteProducts": [],
+      "favoriteRestaurants": [],
+      "followedForums": [],
+      "sensitivities": []
+    },
+    {
+      "id": "3",
+      "name": "שרה מזרחי",
+      "email": "sara.mizrahi@example.com",
+      "isAdmin": false,
+      "password": "saraPass22",
+      "favoriteRecipes": [],
+      "favoriteProducts": [],
+      "favoriteRestaurants": [],
+      "followedForums": []
+    },
+    {
+      "id": "4",
+      "name": "יוסי פרץ",
+      "email": "yossi.peretz@example.com",
+      "isAdmin": false,
+      "password": "yossi456",
+      "favoriteRecipes": [],
+      "favoriteProducts": [],
+      "favoriteRestaurants": [],
+      "followedForums": []
+    },
+    {
+      "id": "5",
+      "name": "מיכל אברהם",
+      "email": "michal.abraham@example.com",
+      "isAdmin": false,
+      "password": "michal789",
+      "favoriteRecipes": [],
+      "favoriteProducts": [],
+      "favoriteRestaurants": [],
+      "followedForums": []
+    },
+    {
+      "id": "6",
+      "name": "מירי",
+      "email": "miri@gmail.com",
+      "password": "yfk$DjjPKC1r",
+      "isAdmin": false,
+      "favoriteRecipes": [],
+      "favoriteProducts": [],
+      "favoriteRestaurants": [],
+      "followedForums": []
+    },
+    {
+      "id": "7",
+      "name": "chanalif",
+      "email": "chana52458@gmail.com",
+      "password": "%276OfX!GE@4",
+      "isAdmin": false,
+      "favoriteRecipes": [
+        4,
+        1
+      ],
+      "favoriteProducts": [],
+      "favoriteRestaurants": [
+        2
+      ],
+      "followedForums": [
+        3
+      ],
+      "sensitivities": [
+        "gluten",
+        "lactose"
+      ]
+    },
+    {
+      "id": "8",
+      "name": "חיה",
+      "email": "v@sd",
+      "password": "H!ghFbp^GyA3",
+      "isAdmin": false,
+      "favoriteRecipes": [],
+      "favoriteProducts": [],
+      "favoriteRestaurants": [],
+      "followedForums": [
+        3
+      ],
+      "sensitivities": [
+        "peanuts"
+      ]
+    }
+  ]
+}

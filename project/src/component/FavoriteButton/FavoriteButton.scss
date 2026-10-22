@@ -1,0 +1,86 @@
+$heart: #D64555;
+
+.favorite-button {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink-2);
+  font-size: 17px;
+  line-height: 1;
+  cursor: pointer;
+  transition: color .15s, border-color .15s, background-color .15s;
+
+  .favorite-icon {
+    display: flex;
+  }
+
+  &:hover {
+    color: $heart;
+    border-color: var(--line-strong);
+  }
+
+  &.favorite-active {
+    color: $heart;
+  }
+
+  // פוסטים בפורום - סימנייה בצבע האתר
+  &.favorite-bookmark {
+    &:hover,
+    &.favorite-active {
+      color: var(--brand);
+    }
+  }
+
+  &.with-label {
+    width: auto;
+    height: 40px;
+    padding: 0 .95rem;
+    border-radius: var(--radius-sm);
+    border-color: var(--line-strong);
+    font-size: 16px;
+    font-weight: 600;
+
+    .favorite-label {
+      font-size: .93rem;
+      color: var(--ink);
+    }
+
+    &.favorite-active {
+      background: #FDF0F1;
+      border-color: transparent;
+    }
+
+    &.favorite-bookmark.favorite-active {
+      background: var(--brand-soft);
+    }
+  }
+
+  &.pop .favorite-icon {
+    animation: favorite-pop .3s ease;
+  }
+}
+
+@keyframes favorite-pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+// מיקום הלב בפינת כרטיס (הכרטיס צריך position: relative)
+.card-favorite {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+}

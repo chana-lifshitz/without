@@ -1,0 +1,163 @@
+.RestaurantDetails {
+  direction: rtl;
+  min-height: 100vh;
+  background: var(--bg);
+  padding: 2rem 1rem;
+  color: var(--ink);
+  display: grid;
+  place-items: center;
+}
+
+.RestaurantDetails .wine-container {
+  width: min(1000px, 100%);
+  display: grid;
+  grid-template-columns: minmax(280px, 350px) 1fr;
+  gap: 2.5rem;
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  background: white;
+  border: 1px solid var(--line-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+.RestaurantDetails .wine-image-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  background: rgba(245, 241, 232, 0.5);
+  border: 1px solid var(--line-strong);
+}
+
+.RestaurantDetails .wine-image {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  background: rgba(243, 232, 219, 0.6);
+  border: 1px solid var(--line-strong);
+}
+
+.RestaurantDetails .cart-message {
+  margin-top: 1rem;
+  color: #2f6f2f;
+  font-weight: 700;
+}
+
+.RestaurantDetails .details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.RestaurantDetails h1,
+.RestaurantDetails h3 {
+  margin: 0;
+}
+
+.RestaurantDetails h1 {
+  color: var(--brand);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.RestaurantDetails h3 {
+  color: var(--line-strong);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.RestaurantDetails p {
+  margin: 0.5rem 0;
+  line-height: 1.7;
+  color: var(--ink-2);
+  font-size: 0.95rem;
+}
+
+.RestaurantDetails .reviews-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.RestaurantDetails .reviews-list li {
+  padding: 1.2rem;
+  border-radius: 10px;
+  background: rgba(245, 241, 232, 0.8);
+  border-left: 4px solid var(--line-strong);
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.RestaurantDetails .add-review {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--line-strong);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.RestaurantDetails .delete-review-btn,
+.RestaurantDetails .add-review button,
+.RestaurantDetails .add-to-cart,
+.RestaurantDetails .go-cart-btn {
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  font-weight: 600;
+}
+
+.RestaurantDetails .delete-review-btn {
+  margin-top: 0.5rem;
+  background: rgba(85, 107, 47, 0.15);
+  color: var(--brand);
+}
+
+.RestaurantDetails .delete-review-btn:hover {
+  
+  background: rgba(85, 107, 47, 0.25);
+  color: #3a4720;
+}
+
+.RestaurantDetails .add-review textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--line-strong);
+  background: white;
+  color: var(--ink);
+  resize: vertical;
+  font-family: 'Assistant', sans-serif;
+  font-size: 0.95rem;
+}
+
+.RestaurantDetails .add-review textarea:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(85, 107, 47, 0.1);
+}
+
+.RestaurantDetails .add-review button,
+.RestaurantDetails .add-to-cart,
+.RestaurantDetails .go-cart-btn {
+  background: var(--brand);
+  color: white;
+}
+
+.RestaurantDetails button:hover {
+  
+}
+
+@media (max-width: 860px) {
+  .RestaurantDetails .wine-container {
+    grid-template-columns: 1fr;
+  }
+}

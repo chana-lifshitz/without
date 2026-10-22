@@ -1,0 +1,32 @@
+@use '../../styles/mixins' as *;
+
+.Purchase {
+  direction: rtl;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+  background: var(--bg);
+}
+
+.Purchase .card {
+  width: min(420px, 100%);
+  padding: 2.5rem 2rem;
+  @include card;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.Purchase .purchase-icon {
+  color: var(--brand);
+}
+
+.Purchase h2 {
+  margin: .9rem 0 .4rem;
+  font-size: 1.5rem;
+}
+
+.Purchase p {
+  margin: 0;
+  color: var(--ink-2);
+}

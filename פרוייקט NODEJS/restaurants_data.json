@@ -1,0 +1,117 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "הטאבון",
+      "city": "ירושלים",
+      "address": "רחוב יפו 45",
+      "type": "בשרי",
+      "kosher": "בד\"ץ",
+      "openingHours": {
+        "days": "א–ה",
+        "hours": "12:00–23:00"
+      },
+      "phone": "02-5551234",
+      "rating": 4.6,
+      "reviews": [
+        {
+          "user": "דוד",
+          "comment": "אוכל מצוין ושירות אדיב",
+          "stars": 5
+        },
+        {
+          "user": "יוסף",
+          "comment": "מעט יקר אבל שווה",
+          "stars": 4
+        }
+      ],
+      "freeFrom": [
+        "gluten",
+        "lactose"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "חלבי בכפר",
+      "city": "מודיעין",
+      "address": "דרך הראשונים 12",
+      "type": "חלבי",
+      "kosher": "מהדרין",
+      "openingHours": {
+        "days": "א–ו",
+        "hours": "08:00–22:00"
+      },
+      "phone": "08-4443322",
+      "rating": 4.2,
+      "reviews": [
+        {
+          "user": "שרה",
+          "comment": "פסטות מעולות",
+          "stars": 5
+        },
+        {
+          "user": "רחל",
+          "comment": "บรรยากาศ רגועה",
+          "stars": 4
+        }
+      ],
+      "freeFrom": [
+        "gluten"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "קפה השדרה",
+      "city": "תל אביב",
+      "address": "שדרות רוטשילד 88",
+      "type": "בית קפה",
+      "kosher": "רבנות",
+      "openingHours": {
+        "days": "א–ש",
+        "hours": "07:00–20:00"
+      },
+      "phone": "03-7778899",
+      "rating": 4,
+      "reviews": [
+        {
+          "user": "אורי",
+          "comment": "קפה טוב, מקום שקט",
+          "stars": 4
+        }
+      ],
+      "freeFrom": [
+        "gluten"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "גריל העיר",
+      "city": "בני ברק",
+      "address": "חזון איש 10",
+      "type": "בשרי",
+      "kosher": "מהדרין",
+      "openingHours": {
+        "days": "א–ה",
+        "hours": "11:30–22:30"
+      },
+      "phone": "03-6662211",
+      "rating": 4.8,
+      "reviews": [
+        {
+          "user": "משה",
+          "comment": "רמה גבוהה מאוד",
+          "stars": 5
+        },
+        {
+          "user": "שמואל",
+          "comment": "שירות מהיר ונעים",
+          "stars": 5
+        }
+      ],
+      "freeFrom": [
+        "gluten",
+        "lactose"
+      ]
+    }
+  ]
+}

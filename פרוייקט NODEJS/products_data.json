@@ -1,0 +1,236 @@
+{
+  "glutenFreeProducts": [
+    {
+      "id": 1,
+      "name": "פסטה ללא גלוטן",
+      "brand": "ברילה",
+      "category": "פסטות",
+      "flavor": "תירס ואורז",
+      "weight": "400 גרם",
+      "kosher": "בד\"ץ העדה החרדית",
+      "contains": "ללא גלוטן",
+      "price": 18.9,
+      "image": "barilla-glutenfree-pasta.jpg",
+      "description": "פסטה איכותית ללא גלוטן המתאימה לבישול מהיר.",
+      "ingredients": [
+        "קמח תירס",
+        "קמח אורז"
+      ],
+      "nutritionalValues": {
+        "calories": 356,
+        "protein": "6g",
+        "carbs": "78g",
+        "fat": "1.5g"
+      },
+      "availableIn": [
+        "שופרסל",
+        "רמי לוי",
+        "ויקטורי"
+      ],
+      "rating": 4.7,
+      "reviews": [
+        {
+          "user": "שרה",
+          "comment": "טעים מאוד ולא מרגישים שזה ללא גלוטן",
+          "stars": 5
+        },
+        {
+          "user": "מיכל",
+          "comment": "מתבשל מצוין",
+          "stars": 4
+        }
+      ],
+      "freeFrom": [
+        "gluten",
+        "lactose",
+        "nuts",
+        "peanuts",
+        "eggs",
+        "soy",
+        "sesame"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "לחם פרוס ללא גלוטן",
+      "brand": "גרין לייט",
+      "category": "לחמים",
+      "flavor": "קלאסי",
+      "weight": "500 גרם",
+      "kosher": "רבנות מהדרין",
+      "contains": "ללא גלוטן",
+      "price": 24.5,
+      "image": "greenlite-bread.jpg",
+      "description": "לחם רך וטעים ללא גלוטן המתאים לטוסטים וסנדוויצ'ים.",
+      "ingredients": [
+        "עמילן תפוח אדמה",
+        "קמח אורז",
+        "שמרים"
+      ],
+      "nutritionalValues": {
+        "calories": 240,
+        "protein": "4g",
+        "carbs": "45g",
+        "fat": "3g"
+      },
+      "availableIn": [
+        "יש חסד",
+        "שופרסל"
+      ],
+      "rating": 4.5,
+      "reviews": [
+        {
+          "user": "דבורה",
+          "comment": "הכי קרוב ללחם רגיל שטעמתי",
+          "stars": 5
+        }
+      ],
+      "freeFrom": [
+        "gluten",
+        "lactose",
+        "nuts",
+        "peanuts",
+        "eggs",
+        "soy",
+        "sesame"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "עוגיות שוקולד צ'יפס ללא גלוטן",
+      "brand": "אסם",
+      "category": "חטיפים ועוגיות",
+      "flavor": "שוקולד",
+      "weight": "250 גרם",
+      "kosher": "בד\"ץ",
+      "contains": "ללא גלוטן",
+      "price": 16.9,
+      "image": "osem-cookies.jpg",
+      "description": "עוגיות פריכות עם שוקולד צ'יפס ללא גלוטן.",
+      "ingredients": [
+        "קמח תירס",
+        "סוכר",
+        "שוקולד צ'יפס"
+      ],
+      "nutritionalValues": {
+        "calories": 470,
+        "protein": "5g",
+        "carbs": "62g",
+        "fat": "22g"
+      },
+      "availableIn": [
+        "רמי לוי",
+        "ויקטורי"
+      ],
+      "rating": 4.8,
+      "reviews": [
+        {
+          "user": "חני",
+          "comment": "טעים בטירוף",
+          "stars": 5
+        },
+        {
+          "user": "לאה",
+          "comment": "הילדים אהבו מאוד",
+          "stars": 5
+        }
+      ],
+      "freeFrom": [
+        "gluten",
+        "peanuts",
+        "eggs",
+        "sesame"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "קורנפלקס ללא גלוטן",
+      "brand": "אלופים",
+      "category": "דגני בוקר",
+      "flavor": "תירס",
+      "weight": "375 גרם",
+      "kosher": "מהדרין",
+      "contains": "ללא גלוטן",
+      "price": 21.9,
+      "image": "cornflakes-glutenfree.jpg",
+      "description": "דגני בוקר פריכים ללא גלוטן.",
+      "ingredients": [
+        "תירס",
+        "סוכר",
+        "מלח"
+      ],
+      "nutritionalValues": {
+        "calories": 380,
+        "protein": "7g",
+        "carbs": "84g",
+        "fat": "1g"
+      },
+      "availableIn": [
+        "שופרסל",
+        "יינות ביתן"
+      ],
+      "rating": 4.3,
+      "reviews": [
+        {
+          "user": "יעל",
+          "comment": "טעים מאוד עם חלב",
+          "stars": 4
+        }
+      ],
+      "freeFrom": [
+        "gluten",
+        "lactose",
+        "nuts",
+        "peanuts",
+        "eggs",
+        "soy",
+        "sesame"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "פיתה ללא גלוטן",
+      "brand": "שר",
+      "category": "מאפים",
+      "flavor": "קלאסי",
+      "weight": "300 גרם",
+      "kosher": "בד\"ץ",
+      "contains": "ללא גלוטן",
+      "price": 27.9,
+      "image": "schar-pita.jpg",
+      "description": "פיתות רכות ללא גלוטן המתאימות להקפאה וחימום.",
+      "ingredients": [
+        "עמילן תירס",
+        "קמח אורז",
+        "שמרים"
+      ],
+      "nutritionalValues": {
+        "calories": 260,
+        "protein": "3g",
+        "carbs": "51g",
+        "fat": "4g"
+      },
+      "availableIn": [
+        "טיב טעם",
+        "שופרסל"
+      ],
+      "rating": 4.6,
+      "reviews": [
+        {
+          "user": "רות",
+          "comment": "מעולה לשווארמה",
+          "stars": 5
+        }
+      ],
+      "freeFrom": [
+        "gluten",
+        "lactose",
+        "nuts",
+        "peanuts",
+        "eggs",
+        "soy",
+        "sesame"
+      ]
+    }
+  ]
+}

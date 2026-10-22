@@ -1,0 +1,15 @@
+.vercel
+
+# dependencies
+node_modules/
+
+# secrets
+.env
+.env.*
+
+# build output
+project/build/
+
+# misc
+.DS_Store
+npm-debug.log*

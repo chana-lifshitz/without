@@ -1,0 +1,94 @@
+.add-wine-form {
+  direction: rtl;
+  max-width: 520px;
+  margin: 2.5rem auto;
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius);
+  background: white;
+  border: 1px solid var(--line-strong);
+  box-shadow: var(--shadow-sm);
+  color: var(--ink);
+}
+
+.add-wine-form h3 {
+  margin-top: 0;
+  margin-bottom: 1.8rem;
+  font-size: 1.9rem;
+  color: var(--brand);
+  text-align: center;
+  font-weight: bold;
+}
+
+.add-wine-form p {
+  color: var(--ink-2);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.add-wine-form form {
+  display: grid;
+  gap: 1.3rem;
+}
+
+.add-wine-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  color: var(--brand);
+  font-size: 0.96rem;
+  font-weight: 600;
+}
+
+.add-wine-form input,
+.add-wine-form textarea,
+.add-wine-form select {
+  width: 100%;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  padding: 0.95rem 1rem;
+  background: #fff;
+  color: var(--ink);
+  font-size: 1rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+.add-wine-form input:focus,
+.add-wine-form textarea:focus,
+.add-wine-form select:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 4px rgba(85, 107, 47, 0.15);
+}
+
+.add-wine-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.add-wine-form button {
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.5rem;
+  background: var(--brand);
+  color: white;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.add-wine-form button:hover {
+  
+  box-shadow: var(--shadow-sm);
+}
+
+.add-wine-form button.secondary {
+  background: transparent;
+  color: var(--brand);
+  border: 1px solid var(--line-strong);
+  margin-left: 0.5rem;
+}

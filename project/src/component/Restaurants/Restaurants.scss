@@ -1,0 +1,79 @@
+@use '../../styles/mixins' as *;
+
+.Restaurants {
+  direction: rtl;
+}
+
+.Restaurants-shell {
+  @include catalog-page;
+  width: 100%;
+}
+
+.Restaurants .city-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: min(260px, 100%);
+  margin-bottom: .5rem;
+
+  svg {
+    position: absolute;
+    right: .8rem;
+    color: var(--muted);
+    pointer-events: none;
+  }
+
+  input {
+    @include input;
+    min-height: 40px;
+    padding-right: 2.4rem;
+  }
+}
+
+.Restaurants .add-restaurant-btn {
+  @include btn-secondary;
+  margin-bottom: 1.25rem;
+}
+
+.Restaurants .restaurants-grid {
+  @include card-grid(270px);
+}
+
+.Restaurants .restaurant-card {
+  @include catalog-card;
+  min-height: 210px;
+}
+
+.Restaurants .restaurant-address {
+  display: flex;
+  align-items: flex-start;
+  gap: .35rem;
+
+  svg {
+    flex-shrink: 0;
+    margin-top: .2rem;
+    color: var(--muted);
+  }
+}
+
+.Restaurants .restaurant-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  font-weight: 600;
+
+  svg {
+    color: var(--star);
+  }
+}
+
+.Restaurants .delete-btn {
+  @include admin-delete;
+}
+
+@media (max-width: $bp-sm) {
+  .Restaurants .city-search {
+    width: 100%;
+    margin: .75rem 0;
+  }
+}

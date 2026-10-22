@@ -1,0 +1,161 @@
+.WineDetails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  background: var(--bg);
+  font-family: 'Assistant', sans-serif;
+  direction: rtl;
+  min-height: 100vh;
+}
+
+.wine-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: white;
+  border-radius: var(--radius);
+  border: 1px solid var(--line-strong);
+  box-shadow: var(--shadow-sm);
+  padding: 2rem;
+  max-width: 800px;
+  width: 100%;
+}
+
+.wine-image-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(245, 241, 232, 0.5);
+  border-radius: var(--radius);
+  border: 1px solid var(--line-strong);
+  min-height: 250px;
+}
+
+.wine-image {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  color: var(--ink);
+}
+
+.details h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: var(--brand);
+  font-weight: bold;
+}
+
+.details h3 {
+  font-size: 1rem;
+  color: var(--line-strong);
+  margin: 0;
+  font-weight: 600;
+}
+
+.details p {
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+  color: var(--ink-2);
+  line-height: 1.6;
+}
+
+.reviews-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.reviews-list li {
+  padding: 1rem;
+  background: rgba(245, 241, 232, 0.8);
+  border-left: 4px solid var(--line-strong);
+  border-radius: 8px;
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.add-review {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--line-strong);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.add-review textarea {
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  padding: 1rem;
+  width: 100%;
+  font-size: 0.95rem;
+  resize: vertical;
+  min-height: 100px;
+  font-family: 'Assistant', sans-serif;
+  color: var(--ink);
+}
+
+.add-review textarea:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(85, 107, 47, 0.1);
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+button {
+  font-size: 0.95rem;
+  padding: 0.85rem 1.5rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--brand);
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-weight: 600;
+}
+
+button:hover {
+  
+  box-shadow: var(--shadow-sm);
+}
+
+.add-to-cart {
+  background: var(--brand);
+}
+
+.add-to-cart:hover {
+  
+  box-shadow: var(--shadow-sm);
+}
+
+.cart-message {
+  color: #2f6f2f;
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background: rgba(47, 111, 47, 0.1);
+  border-left: 4px solid #2f6f2f;
+  border-radius: 6px;
+}

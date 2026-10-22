@@ -1,0 +1,32 @@
+@use '../../styles/mixins' as *;
+
+.Products {
+  direction: rtl;
+}
+
+.Products-shell {
+  @include catalog-page;
+  width: 100%;
+}
+
+.Products .products-grid {
+  @include card-grid(260px);
+}
+
+.Products .product-card {
+  @include catalog-card;
+  // הכרטיס מתמלא עד הכפתור, כדי שהשורה התחתונה תהיה באותו גובה בכל הכרטיסים
+  min-height: 220px;
+}
+
+.Products .product-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+}
+
+.Products .admin-delete-btn {
+  @include admin-delete;
+}

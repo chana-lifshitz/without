@@ -1,0 +1,210 @@
+{
+  "recipes": [
+    {
+      "id": "1",
+      "name": "שקשוקה",
+      "category": "ארוחת בוקר",
+      "image": "img.jpg",
+      "ingredients": [
+        "ביצים",
+        "עגבניות",
+        "בצל",
+        "פלפל ירוק",
+        "שום",
+        "שמן זית"
+      ],
+      "preparationTime": "30 דקות",
+      "difficulty": "קל",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "user": "דנה",
+          "comment": "טעים ופשוט להכנה",
+          "stars": 5
+        },
+        {
+          "user": "יואב",
+          "comment": "אהבתי את הרוטב",
+          "stars": 4
+        }
+      ],
+      "freeFrom": [
+        "gluten",
+        "lactose",
+        "nuts",
+        "peanuts",
+        "soy",
+        "sesame"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "פסטה פומודורו",
+      "category": "פסטות",
+      "image": "img.jpg",
+      "ingredients": [
+        "פסטה ספגטי",
+        "עגבניות",
+        "שום",
+        "בזיליקום",
+        "שמן זית"
+      ],
+      "preparationTime": "25 דקות",
+      "difficulty": "קל",
+      "rating": 4.5,
+      "reviews": [
+        {
+          "user": "שרה",
+          "comment": "פסטה קלאסית ומצוינת",
+          "stars": 5
+        },
+        {
+          "user": "רוני",
+          "comment": "פשוטה ומאוד טעימה",
+          "stars": 4
+        }
+      ],
+      "freeFrom": [
+        "lactose",
+        "nuts",
+        "peanuts",
+        "eggs",
+        "soy",
+        "sesame"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "עוגת שוקולד בחושה",
+      "category": "עוגות",
+      "image": "img.jpg",
+      "ingredients": [
+        "קמח",
+        "סוכר",
+        "שוקולד מריר",
+        "ביצים",
+        "שמן",
+        "חלב"
+      ],
+      "preparationTime": "40 דקות",
+      "difficulty": "בינוני",
+      "rating": 4.9,
+      "reviews": [
+        {
+          "user": "נועה",
+          "comment": "עוגה עשירה וטעימה מאוד",
+          "stars": 5
+        },
+        {
+          "user": "דוד",
+          "comment": "נמסה בפה!",
+          "stars": 5
+        }
+      ],
+      "freeFrom": [
+        "peanuts",
+        "sesame"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "עוף בגריל עם תבלינים",
+      "category": "עיקריות",
+      "image": "img.jpg",
+      "ingredients": [
+        "עוף",
+        "שמן זית",
+        "פפריקה",
+        "שום",
+        "מלח",
+        "פלפל שחור"
+      ],
+      "preparationTime": "60 דקות",
+      "difficulty": "בינוני",
+      "rating": 4.8,
+      "reviews": [
+        {
+          "user": "משה",
+          "comment": "עוף עסיסי וטעים מאוד",
+          "stars": 5
+        },
+        {
+          "user": "רחל",
+          "comment": "תבלינים מדויקים",
+          "stars": 4
+        }
+      ],
+      "freeFrom": [
+        "gluten",
+        "lactose",
+        "nuts",
+        "peanuts",
+        "eggs",
+        "soy",
+        "sesame"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "מרק ירקות מזין",
+      "category": "מרקים",
+      "image": "img.jpg",
+      "ingredients": [
+        "גזר",
+        "קישוא",
+        "תפוח אדמה",
+        "בצל",
+        "קולרבי",
+        "מלח",
+        "פלפל"
+      ],
+      "preparationTime": "35 דקות",
+      "difficulty": "קל",
+      "rating": 4.6,
+      "reviews": [
+        {
+          "user": "ענת",
+          "comment": "מרק חמים ובריא",
+          "stars": 5
+        },
+        {
+          "user": "אורי",
+          "comment": "ילדים אוהבים אותו",
+          "stars": 4
+        }
+      ],
+      "freeFrom": [
+        "gluten",
+        "lactose",
+        "nuts",
+        "peanuts",
+        "eggs",
+        "soy",
+        "sesame"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "סלט",
+      "category": "סלטים",
+      "image": "img.jpg",
+      "ingredients": [
+        "חצילים",
+        "גבינה",
+        "גמבה"
+      ],
+      "preparationTime": "20 דקות",
+      "difficulty": "קל",
+      "rating": 3,
+      "reviews": [],
+      "freeFrom": [
+        "gluten",
+        "nuts",
+        "peanuts",
+        "eggs",
+        "soy",
+        "sesame"
+      ]
+    }
+  ]
+}

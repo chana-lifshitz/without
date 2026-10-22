@@ -6,6 +6,7 @@ import { RecipeModel } from '../../models/wine';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../redux/shoppingSlice';
 import { showMessage } from '../../redux/messageSlice';
+import { API_URL } from '../../config/api';
 
 const WineDetails: FC = () => {
   const [WineDetail, setWineDetail] = useState<null | RecipeModel>(null);
@@ -106,7 +107,7 @@ const WineDetails: FC = () => {
           <div className="wine-image-side">
             <img
               className="wine-image"
-              src={`http://localhost:2000/image/${WineDetail.image}`}
+              src={`${API_URL}/image/${WineDetail.image}`}
               alt={WineDetail.name}
             />
             {addedToCart && <p className="cart-message">נוסף לסל!</p>}

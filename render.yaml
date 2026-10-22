@@ -1,0 +1,15 @@
+# הגדרות לשרת ב-Render (https://render.com)
+services:
+  - type: web
+    name: tasty-without-api
+    runtime: node
+    rootDir: פרוייקט NODEJS
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: MONGODB_DB
+        value: tasty-without

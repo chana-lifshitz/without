@@ -193,6 +193,7 @@ import {
 import { RestaurantModel } from '../../models/restaurant';
 import { useDispatch } from 'react-redux';
 import { showMessage } from '../../redux/messageSlice';
+import { API_URL } from '../../config/api';
 
 const RestaurantDetails: FC = () => {
 
@@ -373,7 +374,7 @@ const RestaurantDetails: FC = () => {
               <img
                 className="restaurant-image"
                 src={
-                  `http://localhost:2000/image/${restaurantDetail.image}`
+                  `${API_URL}/image/${restaurantDetail.image}`
                 }
                 alt={restaurantDetail.name}
               />

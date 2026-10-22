@@ -954,6 +954,7 @@ import {
   LuUser,
   LuUtensils
 } from 'react-icons/lu';
+import { API_URL } from '../../config/api';
 
 interface CustomerDetailsProps {}
 
@@ -1085,12 +1086,12 @@ const CustomerDetails: FC<CustomerDetailsProps> = () => {
       recipe: pick('recipe', recipes, r => ({
         title: r.name,
         meta: [r.category, r.preparationTime, r.difficulty].filter(Boolean) as string[],
-        imageUrl: r.image ? `http://localhost:2000/image/${r.image}` : undefined
+        imageUrl: r.image ? `${API_URL}/image/${r.image}` : undefined
       })),
       product: pick('product', products, p => ({
         title: p.name,
         meta: [p.brand, p.price !== undefined ? `₪${p.price}` : '', p.category].filter(Boolean) as string[],
-        imageUrl: p.image ? `http://localhost:2000/image/${p.image}` : undefined
+        imageUrl: p.image ? `${API_URL}/image/${p.image}` : undefined
       })),
       restaurant: pick('restaurant', restaurants, r => ({
         title: r.name,

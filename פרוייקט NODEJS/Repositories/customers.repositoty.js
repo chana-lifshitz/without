@@ -487,11 +487,9 @@
 // module.exports =
 //   new Customer_repository();
 
-const fs = require('fs');
-const path = require('path');
+const store = require('../store');
 const { ALLERGEN_KEYS } = require('../allergens');
 
-const dataPath = path.join(__dirname, '../customers_data.json');
 
 class Customer_repository {
 
@@ -504,8 +502,7 @@ class Customer_repository {
     // =========================================
 
     readCustomers() {
-        const rawData = fs.readFileSync(dataPath, 'utf-8');
-        return JSON.parse(rawData);
+        return store.read('customers');
     }
 
 
@@ -514,11 +511,7 @@ class Customer_repository {
     // =========================================
 
     saveCustomers(data) {
-        fs.writeFileSync(
-            dataPath,
-            JSON.stringify(data, null, 2),
-            'utf-8'
-        );
+        store.write('customers', data);
     }
 
 

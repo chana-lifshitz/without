@@ -3,37 +3,18 @@ const { findUser, canModify } = require('../permissions');
 const express = require('express');
 const router = express.Router();
 const restaurantService = require('../Servises/restaurants.service');
-const multer = require('multer');
+const { imageUploadHandler } = require('../upload');
 const path = require('path');
-const fs = require('fs');
+const store = require('../store');
 
-const dataPath = path.join(__dirname, '..', 'restaurants_data.json');
 
-// הגדרת אחסון התמונות לתיקיית images/
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, path.join(__dirname, '..', 'image'));
-  },
-  filename: (req, file, cb) => {
-    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
-    const ext = path.extname(file.originalname);
-    cb(null, file.fieldname + '-' + uniqueSuffix + ext);
-  }
-});
-
-const upload = multer({ storage });
 
 // API להעלאת תמונה
-router.post('/upload-image', upload.single('image'), (req, res) => {
-  if (!req.file) {
-    return res.status(400).json({ error: 'No file uploaded' });
-  }
-  res.json({ filename: req.file.filename }); // רק שם הקובץ
-});
+router.post('/upload-image', imageUploadHandler());
 
 // פונקציה ליצירת מזהה יין חדש (אופציונלי אם לא משתמשים ב-service)
 async function generateNewId() {
-  const rawDataRestaurant = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+  const rawDataRestaurant = store.read('restaurants');
   const restaurantsArray = rawDataRestaurant.restaurants;
   const maxId = restaurantsArray.reduce((max, restaurant) => Math.max(max, parseInt(restaurant.id)), 0);
   return (maxId + 1).toString();

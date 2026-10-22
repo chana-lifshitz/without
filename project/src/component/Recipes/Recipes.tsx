@@ -131,6 +131,7 @@ import FavoriteButton from '../FavoriteButton/FavoriteButton';
 import ItemDetailsModal from '../ItemDetailsModal/ItemDetailsModal';
 import { AllergenBadges, AllergenFilter, useAllergenFilter } from '../Allergens/Allergens';
 import { LuChartNoAxesColumn, LuChefHat, LuClock, LuListChecks, LuTag, LuTrash2 } from 'react-icons/lu';
+import { API_URL } from '../../config/api';
 interface RecipesProps {}
 
 const Recipes: FC<RecipesProps> = () => {
@@ -313,7 +314,7 @@ const Recipes: FC<RecipesProps> = () => {
         {selectedRecipe && (
           <ItemDetailsModal
             title={selectedRecipe.name}
-            imageUrl={selectedRecipe.image ? `http://localhost:2000/image/${selectedRecipe.image}` : undefined}
+            imageUrl={selectedRecipe.image ? `${API_URL}/image/${selectedRecipe.image}` : undefined}
             fallbackIcon={<LuChefHat />}
             badges={[selectedRecipe.category, selectedRecipe.difficulty]}
             rating={selectedRecipe.rating}
@@ -352,7 +353,7 @@ const Recipes: FC<RecipesProps> = () => {
                 {wine.image ? (
                   <img
                     className="product-image"
-                    src={`http://localhost:2000/image/${wine.image}`}
+                    src={`${API_URL}/image/${wine.image}`}
                     alt={wine.name}
                   />
                 ) : (

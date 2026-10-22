@@ -1,29 +1,27 @@
-const fs = require('fs');
-const path = require('path');
-const dataPath = path.join(__dirname, '..', 'wines_data.json');
+const store = require('../store');
 
 class Wine_repository {
     constructor() { }
 
     async getAllWines() {
-        const rawData = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+        const rawData = store.read('wines');
         return rawData;
     }
 
     async getWineById(id) {
-        const rawData = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+        const rawData = store.read('wines');
         // המרה ל-string להשוואה עקבית
         const wine = rawData.wines.find(w => w.id.toString() === id.toString());
         return wine || null;
     }
 
     async getWinesByCategory(category) {
-        const rawData = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+        const rawData = store.read('wines');
         return rawData.wines.filter(wine => wine.category === category);
     }
 
     async addReview(id, reviewObj) {
-  const rawData = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+  const rawData = store.read('wines');
   const winesArray = rawData.wines;
 
   const wine = winesArray.find(w => w.id.toString() === id.toString());
@@ -32,21 +30,21 @@ class Wine_repository {
   // הוסף את האובייקט במקום מחרוזת בלבד
   wine.reviews.push(reviewObj);
 
-  fs.writeFileSync(dataPath, JSON.stringify(rawData, null, 2), 'utf-8');
+  store.write('wines', rawData);
 
   return wine;
 }
 
 
     async generateNewId() {
-        const rawData = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+        const rawData = store.read('wines');
         const winesArray = rawData.wines;
         const maxId = winesArray.reduce((max, wine) => Math.max(max, parseInt(wine.id)), 0);
         return (maxId + 1).toString();
     }
 
     async addWine(newWine) {
-        const rawData = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+        const rawData = store.read('wines');
         const winesArray = rawData.wines;
 
         newWine.id = await this.generateNewId();
@@ -55,13 +53,13 @@ class Wine_repository {
 
         winesArray.push(newWine);
 
-        fs.writeFileSync(dataPath, JSON.stringify(rawData, null, 2), 'utf-8');
+        store.write('wines', rawData);
 
         return newWine;
     }
 
     async deleteWineById(id) {
-        const rawData = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+        const rawData = store.read('wines');
         const winesArray = rawData.wines;
 
         // המרה ל-string לשם השוואה עקבית
@@ -69,7 +67,7 @@ class Wine_repository {
 
         if (index !== -1) {
             const removed = winesArray.splice(index, 1)[0];
-            fs.writeFileSync(dataPath, JSON.stringify(rawData, null, 2), 'utf-8');
+            store.write('wines', rawData);
             return removed;
         }
 
@@ -77,7 +75,7 @@ class Wine_repository {
     }
 
     async deleteReview(wineId, reviewIndex) {
-    const rawData = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+    const rawData = store.read('wines');
     const winesArray = rawData.wines;
 
     const wine = winesArray.find(w => w.id.toString() === wineId.toString());
@@ -87,7 +85,7 @@ class Wine_repository {
 
     wine.reviews.splice(reviewIndex, 1);
 
-    fs.writeFileSync(dataPath, JSON.stringify(rawData, null, 2), 'utf-8');
+    store.write('wines', rawData);
 
     return wine;
 }

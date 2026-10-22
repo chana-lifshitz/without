@@ -1,8 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const store = require('../store');
 const { ALLERGEN_KEYS } = require('../allergens');
-
-const dataPath = path.join(__dirname, '../forum_data.json');
 
 const findReply = (replies, replyId) => {
     for (const reply of replies || []) {
@@ -27,23 +24,13 @@ class Forum_repository {
     constructor() {}
 
     readData() {
-        const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+        const data = store.read('forum');
         data.posts = data.posts || [];
         return data;
     }
 
-    // כתיבה לקובץ זמני ואז החלפה - כך הקובץ לעולם לא נשאר חצי כתוב
     writeData(data) {
-        const tempPath = `${dataPath}.tmp`;
-        const json = JSON.stringify(data, null, 2);
-        fs.writeFileSync(tempPath, json, 'utf-8');
-        try {
-            fs.renameSync(tempPath, dataPath);
-        } catch (error) {
-            // ב-Windows ההחלפה עלולה להיחסם אם הקובץ פתוח בתוכנה אחרת
-            fs.writeFileSync(dataPath, json, 'utf-8');
-            fs.rmSync(tempPath, { force: true });
-        }
+        store.write('forum', data);
     }
 
     async getAllPosts() {

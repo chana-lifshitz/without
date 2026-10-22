@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { PostModel, ReplyModel,AddPostModel, AddReplyModel } from "../models/forum";
+import { API_URL } from '../config/api';
 
 export interface ReviewInput {
   clientId: number | string;
@@ -9,27 +10,27 @@ export interface ReviewInput {
 }
 
 export function GetAllWines() {
-    console.log('fghjjhhhhhhk',axios.get('http://localhost:2000/api/recipes'));
-  return axios.get('http://localhost:2000/api/recipes');
+    console.log('fghjjhhhhhhk',axios.get(`${API_URL}/api/recipes`));
+  return axios.get(`${API_URL}/api/recipes`);
 }
 
 export function GetWinesById(id: number) {
-  return axios.get(`http://localhost:2000/api/recipes/${id}`);
+  return axios.get(`${API_URL}/api/recipes/${id}`);
 }
 
 export function GetWinesByCategory(category: string) {
-  return axios.get(`http://localhost:2000/api/recipes/category/${encodeURIComponent(category)}`);
+  return axios.get(`${API_URL}/api/recipes/category/${encodeURIComponent(category)}`);
 }
 
 export function AddWineReview(id: string, reviewObj: ReviewInput) {
-  return axios.post(`http://localhost:2000/api/recipes/${id}/review`, reviewObj);
+  return axios.post(`${API_URL}/api/recipes/${id}/review`, reviewObj);
 }
 
 
 export function UploadWineImage(file: File) {
   const formData = new FormData();
   formData.append('image', file);
-  return axios.post('http://localhost:2000/api/recipes/upload-image', formData, {
+  return axios.post(`${API_URL}/api/recipes/upload-image`, formData, {
     headers: { 'Content-Type': 'multipart/form-data' }
   });
 }
@@ -46,15 +47,15 @@ export function AddWine(wineData: {
 
       reviews: [];
 }) {
-  return axios.post('http://localhost:2000/api/recipes', wineData);
+  return axios.post(`${API_URL}/api/recipes`, wineData);
 }
 
 export function DeleteWine(id: string, userId?: number | string) {
-  return axios.delete(`http://localhost:2000/api/recipes/${id}`, { params: { userId } });
+  return axios.delete(`${API_URL}/api/recipes/${id}`, { params: { userId } });
 }
 
 export function deleteWineReview(wineId: string, reviewIndex: number, userId?: number | string) {
-  return axios.delete(`http://localhost:2000/api/recipes/${wineId}/review/${reviewIndex}`, { params: { userId } });
+  return axios.delete(`${API_URL}/api/recipes/${wineId}/review/${reviewIndex}`, { params: { userId } });
 }
 //////
 // export function GetAllRestaurants() {
@@ -86,31 +87,31 @@ export function deleteRestaurantReview(
     userId?: number | string
 ) {
     return axios.delete(
-        `http://localhost:2000/api/restaurants/${id}/review/${index}`,
+        `${API_URL}/api/restaurants/${id}/review/${index}`,
         { params: { userId } }
     );
 }
 export function GetAllRestaurants() {
-  return axios.get('http://localhost:2000/api/restaurants');
+  return axios.get(`${API_URL}/api/restaurants`);
 }
 
 export function GetRestaurantsById(id: number) {
-  return axios.get(`http://localhost:2000/api/restaurants/${id}`);
+  return axios.get(`${API_URL}/api/restaurants/${id}`);
 }
 
 export function GetRestaurantsByCategory(category: string) {
-  return axios.get(`http://localhost:2000/api/restaurants/category/${encodeURIComponent(category)}`);
+  return axios.get(`${API_URL}/api/restaurants/category/${encodeURIComponent(category)}`);
 }
 
 export function AddRestaurantReview(id: string, reviewObj: ReviewInput) {
-  return axios.post(`http://localhost:2000/api/restaurants/${id}/review`, reviewObj);
+  return axios.post(`${API_URL}/api/restaurants/${id}/review`, reviewObj);
 }
 
 
 export function UploadRestaurantImage(file: File) {
   const formData = new FormData();
   formData.append('image', file);
-  return axios.post('http://localhost:2000/api/restaurants/upload-image', formData, {
+  return axios.post(`${API_URL}/api/restaurants/upload-image`, formData, {
     headers: { 'Content-Type': 'multipart/form-data' }
   });
 }
@@ -127,25 +128,25 @@ export function AddRestaurant(restaurantData: {
       rating: number;
       reviews: [];
 }) {
-    return axios.post('http://localhost:2000/api/restaurants', restaurantData);
+    return axios.post(`${API_URL}/api/restaurants`, restaurantData);
 }
 
 export function DeleteRestaurant(id: string, userId?: number | string) {
-  return axios.delete(`http://localhost:2000/api/restaurants/${id}`, { params: { userId } });
+  return axios.delete(`${API_URL}/api/restaurants/${id}`, { params: { userId } });
 }
 
 
 //////
 
 export function CheckCustomer(email: string, password: string) {
-  return axios.post('http://localhost:2000/api/customers/login', {
+  return axios.post(`${API_URL}/api/customers/login`, {
     email,
     password
   });
 }
 
 export function AddCustomer(name:string, email: string, password: string) {
-  return axios.post('http://localhost:2000/api/customers/signUp', {
+  return axios.post(`${API_URL}/api/customers/signUp`, {
     name,
     email,
     password
@@ -166,17 +167,17 @@ export function AddCustomer(name:string, email: string, password: string) {
 //////
 
 export function GetAllProducts() {
-  console.log('bbbbbbb',axios.get('http://localhost:2000/api/products'));
-  return axios.get('http://localhost:2000/api/products');
+  console.log('bbbbbbb',axios.get(`${API_URL}/api/products`));
+  return axios.get(`${API_URL}/api/products`);
 }
 
 export function GetProductsById(id: number) {
-  return axios.get(`http://localhost:2000/api/products/${id}`);
+  return axios.get(`${API_URL}/api/products/${id}`);
 }
 
 export function GetProductsByCategory(category: string) {
   return axios.get(
-    `http://localhost:2000/api/products/category/${encodeURIComponent(category)}`
+    `${API_URL}/api/products/category/${encodeURIComponent(category)}`
   );
 }
 
@@ -185,7 +186,7 @@ export function AddProductReview(
   reviewObj: ReviewInput
 ) {
   return axios.post(
-    `http://localhost:2000/api/products/${id}/review`,
+    `${API_URL}/api/products/${id}/review`,
     reviewObj
   );
 }
@@ -197,7 +198,7 @@ export function UploadProductImage(file: File) {
   formData.append('image', file);
 
   return axios.post(
-    'http://localhost:2000/api/products/upload-image',
+    `${API_URL}/api/products/upload-image`,
     formData,
     {
       headers: {
@@ -247,14 +248,14 @@ export function AddProduct(productData: {
 }) {
 
   return axios.post(
-    'http://localhost:2000/api/products',
+    `${API_URL}/api/products`,
     productData
   );
 }
 
 export function DeleteProduct(id: string, userId?: number | string) {
   return axios.delete(
-    `http://localhost:2000/api/products/${id}`,
+    `${API_URL}/api/products/${id}`,
     { params: { userId } }
   );
 }
@@ -266,7 +267,7 @@ export function DeleteProductReview(
 ) {
 
   return axios.delete(
-    `http://localhost:2000/api/products/${productId}/review/${reviewIndex}`,
+    `${API_URL}/api/products/${productId}/review/${reviewIndex}`,
     { params: { userId } }
   );
 }
@@ -274,26 +275,26 @@ export function DeleteProductReview(
 //////////
 ////////// FORUM //////////
 export function GetAllPosts() {
-  return axios.get('http://localhost:2000/api/forum');
+  return axios.get(`${API_URL}/api/forum`);
 }
 
 export function GetPostById(id: number) {
-  return axios.get(`http://localhost:2000/api/forum/${id}`);
+  return axios.get(`${API_URL}/api/forum/${id}`);
 }
 
 // מעלה תמונה מהמחשב ומחזיר את הכתובת המלאה שלה בשרת
 export async function UploadForumImage(file: File): Promise<string> {
   const formData = new FormData();
   formData.append('image', file);
-  const response = await axios.post('http://localhost:2000/api/forum/upload-image', formData, {
+  const response = await axios.post(`${API_URL}/api/forum/upload-image`, formData, {
     headers: { 'Content-Type': 'multipart/form-data' }
   });
-  return `http://localhost:2000/image/${response.data.filename}`;
+  return `${API_URL}/image/${response.data.filename}`;
 }
 
 export function AddPost(postData: AddPostModel) {
   return axios.post(
-    'http://localhost:2000/api/forum',
+    `${API_URL}/api/forum`,
     postData
   );
 }
@@ -303,34 +304,33 @@ export function AddReply(
     replyData: AddReplyModel
 ) {
     return axios.post(
-        `http://localhost:2000/api/forum/reply/${postId}`,
+        `${API_URL}/api/forum/reply/${postId}`,
         replyData
     );
 }
 export function ToggleLike(postId: number, userId: number | string) {
   return axios.put(
-    `http://localhost:2000/api/forum/like/${postId}`,
+    `${API_URL}/api/forum/like/${postId}`,
     { userId }
   );
 }
 
 export function DeletePost(postId: number, userId: number | string) {
   return axios.delete(
-    `http://localhost:2000/api/forum/${postId}`,
+    `${API_URL}/api/forum/${postId}`,
     { params: { userId } }
   );
 }
 
 export function DeleteReply(postId: number, replyId: number, userId: number | string) {
   return axios.delete(
-    `http://localhost:2000/api/forum/${postId}/reply/${replyId}`,
+    `${API_URL}/api/forum/${postId}/reply/${replyId}`,
     { params: { userId } }
   );
 }
 
 ///////////
 
-const API_URL = 'http://localhost:2000';
 
 
 // =========================

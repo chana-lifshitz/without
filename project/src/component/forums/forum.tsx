@@ -12,6 +12,7 @@ import {
     LuX
 } from "react-icons/lu";
 import { AllergenIcon } from "../Allergens/Allergens";
+import { fixServerUrl } from "../../config/api";
 
 import { PostModel, ReplyModel } from "../../models/forum";
 import { customerModel } from "../../models/customer";
@@ -568,7 +569,7 @@ const Forum: FC = () => {
                 </div>
                 <p>{reply.text}</p>
                 {reply.image && (
-                    <img src={reply.image} className="reply-image" alt="" />
+                    <img src={fixServerUrl(reply.image)} className="reply-image" alt="" />
                 )}
                                 {!isPending && (
                     <div className="reply-actions">
@@ -820,7 +821,7 @@ const Forum: FC = () => {
                         >
                             {post.image && (
                                 <img
-                                    src={post.image}
+                                    src={fixServerUrl(post.image)}
                                     alt={post.title}
                                     className="post-image"
                                 />
@@ -910,7 +911,7 @@ const Forum: FC = () => {
 
                             {selectedPost.image && (
                                 <img
-                                    src={selectedPost.image}
+                                    src={fixServerUrl(selectedPost.image)}
                                     alt={selectedPost.title}
                                     className="modal-image"
                                 />

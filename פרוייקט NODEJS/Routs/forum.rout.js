@@ -2,34 +2,12 @@ const express = require('express');
 const router = express.Router();
 
 const forumService = require('../Servises/forum.service');
-const multer = require('multer');
+const { imageUploadHandler } = require('../upload');
 const path = require('path');
 
-// הגדרת אחסון התמונות לתיקיית image/
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '..', 'image'));
-    },
-    filename: (req, file, cb) => {
-        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
-        const ext = path.extname(file.originalname);
-        cb(null, 'forum-' + uniqueSuffix + ext);
-    }
-});
-
-const upload = multer({
-    storage,
-    limits: { fileSize: 5 * 1024 * 1024 },
-    fileFilter: (req, file, cb) => cb(null, file.mimetype.startsWith('image/'))
-});
 
 // העלאת תמונה מהמחשב לפוסט / תגובה
-router.post('/upload-image', upload.single('image'), (req, res) => {
-    if (!req.file) {
-        return res.status(400).json({ error: 'No image uploaded' });
-    }
-    res.json({ filename: req.file.filename });
-});
+router.post('/upload-image', imageUploadHandler('forum'));
 
 // קבלת כל הפוסטים
 router.get('/', async (req, res) => {

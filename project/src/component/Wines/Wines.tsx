@@ -310,6 +310,7 @@ import AddWineForm from '../AddWineForm/AddWineForm';
 
 import { useDispatch } from 'react-redux';
 import { showMessage } from '../../redux/messageSlice';
+import { API_URL } from '../../config/api';
 
 const Wines: FC = () => {
 
@@ -455,7 +456,7 @@ const Wines: FC = () => {
             {r.image && (
               <img
                 className="product-image"
-                src={`http://localhost:2000/image/${r.image}`}
+                src={`${API_URL}/image/${r.image}`}
                 alt={r.name}
               />
             )}

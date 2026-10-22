@@ -10,6 +10,7 @@ import ItemDetailsModal from '../ItemDetailsModal/ItemDetailsModal';
 import FavoriteButton from '../FavoriteButton/FavoriteButton';
 import { AllergenBadges, AllergenFilter, useAllergenFilter } from '../Allergens/Allergens';
 import { LuScale, LuShoppingBasket, LuSmile, LuTrash2, LuWallet, LuBadgeCheck } from 'react-icons/lu';
+import { API_URL } from '../../config/api';
 
 interface ProductsProps {}
 
@@ -199,7 +200,7 @@ const Products: FC<ProductsProps> = () => {
           <ItemDetailsModal
             title={selectedProduct.name}
             subtitle={selectedProduct.brand}
-            imageUrl={selectedProduct.image ? `http://localhost:2000/image/${selectedProduct.image}` : undefined}
+            imageUrl={selectedProduct.image ? `${API_URL}/image/${selectedProduct.image}` : undefined}
             fallbackIcon={<LuShoppingBasket />}
             badges={[selectedProduct.category, selectedProduct.contains]}
             rating={selectedProduct.rating}
@@ -252,7 +253,7 @@ const Products: FC<ProductsProps> = () => {
               {/* {p.image ; (
                 <img
                   className="product-image"
-                  src={`http://localhost:2000/image/${p.image}`}
+                  src={`${API_URL}/image/${p.image}`}
                   alt={p.name}
                 />
               )} */}
